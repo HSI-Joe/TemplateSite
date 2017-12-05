@@ -1,0 +1,32 @@
+<!-- Footer -->
+<div class="row footer">
+  <div class="col-md-4">
+    <h4 class="footer-header">Popular</h4>
+    <div ng-repeat="part in parts">
+      <a ng-if="part.favorite!=false" href="{{ part.operationManual }}">
+        <p class="footer-subtext">{{ part.name }}</p>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h4>Support</h4>
+    <a href="https://harrissupplyind.com/">
+      <p class="footer-subtext">Harris Supply Industries</p>
+    </a>
+    <a href="#">
+      <p class="footer-subtext" title="608-268-8080">Free Tech Phone Support</p>
+    </a>
+  </div>
+  <div class="col-md-4">
+   <h4>Other Sites</h4>
+   <a href="https://nssworld.net/">
+     <p class="footer-subtext">NSS Parts</p>
+   </a>
+   <a href="https://clarkeparts.com/">
+     <p class="footer-subtext">Clarke Parts</p>
+   </a>
+   <a href="https://www.wholehogjanitorial.com/advance-parts/">
+     <p class="footer-subtext">Advance Parts</p>
+   </a>
+  </div>
+</div>

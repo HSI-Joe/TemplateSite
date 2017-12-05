@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="displayApp">
+  <head>
+    <title>Harris Supply Industries</title>
+
+    <!-- Required META tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- CSS Files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="../javascript/core.js"></script>
+
+  </head>
+  <body ng-controller="dataController" class="page-body">
+    <!-- Navigation -->
+    <div ng-include="'./navigation.html'"></div>
+    <!-- <div id="navBar"></div> -->
+    <!-- Title -->
+    <div class="jumbotron header">
+      <h1 style="margin-top: 0px; text-align: center;">{{name}} Parts</h1>
+      <h3 class="subtitle" style="text-align: center;">Free tech support and fast shipping!</h3>
+    </div>
+    <br>
+    <div class="row gallary-small">
+      <div ng-repeat="part in parts" ng-if="part.favorite==true" class="col-md-4">
+        <div class="thumbnail">
+          <a href="{{ part.operationManual }}">
+            <img src="../images/placeholder.png" alt="{{ part.name }}" style="width:100%">
+            <div class="caption">
+              <p>{{ part.name }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Footer -->
+    <div ng-include="'./footer.html'"></div>
+  </body>
+</html>
