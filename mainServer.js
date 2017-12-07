@@ -66,6 +66,10 @@ app.get('/api/strings', function(req, res) {
 
 // Site ===================================================
 
+app.get('/', function (req, res) {
+  res.sendFile('Public/HTML/index.html', {root: __dirname })
+});
+
 app.get('*', function (req, res) {
   res.send("404 not found");
 });
