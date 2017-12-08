@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Server api =============================================
 
-app.get('/api/parts', function(req, res, man) {
+app.get('/api/parts', function(req, res) {
   var manufacturer = "IPC Eagle"
   db.getDatabaseParts(url, manufacturer, function(err, result) {
     if (err) {
@@ -57,7 +57,7 @@ app.post('/api/parts', function(req, res) {
 
 app.get('/api/strings', function(req, res) {
   var dict = {
-    name: manufacturer
+    name: "NSS"
   };
 
   res.send(JSON.stringify(dict));

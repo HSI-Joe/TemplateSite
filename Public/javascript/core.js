@@ -6,7 +6,7 @@ var dataController = function mainController($scope, $http) {
   // Load from data base ====================================
   $http({
     method: 'GET',
-    url: '/api/parts'
+    url: '/api/parts',
   }).then(function (result) {
     var data = result.data;
     $scope.parts = data;
