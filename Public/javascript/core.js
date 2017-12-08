@@ -54,9 +54,6 @@ var dataController = function mainController($scope, $http) {
 
 var stringController = function mainController($scope, $http) {
   $scope.formData = {};
-
-
-
 }
 
 display.controller('dataController', dataController)

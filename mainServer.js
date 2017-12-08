@@ -6,7 +6,6 @@ var db = require('./DBLoader');                 // load database
 var path = __dirname + "/Public/";
 var bodyParser = require('body-parser');        // for html forms
 var url = "mongodb://localhost:27017/";         // Database url
-var manufacturer = "IPC Eagle"                  // *NAME_REPLACE*
 
 //Config ==================================================
 
@@ -15,7 +14,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // Server api =============================================
 
-app.get('/api/parts', function(req, res) {
+app.get('/api/parts', function(req, res, man) {
+  var manufacturer = "IPC Eagle"
   db.getDatabaseParts(url, manufacturer, function(err, result) {
     if (err) {
       console.error("Error getting parts in api...");
