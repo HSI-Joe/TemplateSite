@@ -27,6 +27,12 @@ body {
 .part-subheader {
   color: #95a5a6;
 }
+.center-align {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Navigation ================================================================*/
 .nav li:hover {
   background: #7f8c8d;
