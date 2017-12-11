@@ -10,12 +10,13 @@ var url = "mongodb://localhost:27017/";         // Database url
 //Config ==================================================
 
 app.use(express.static(__dirname + '/Public/'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json({ type: '*' }));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Server api =============================================
 
 app.get('/api/parts', function(req, res) {
-  var manufacturer = "IPC Eagle"
+  var manufacturer = req.query.part_man
   db.getDatabaseParts(url, manufacturer, function(err, result) {
     if (err) {
       console.error("Error getting parts in api...");

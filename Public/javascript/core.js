@@ -1,4 +1,5 @@
 var display = angular.module('displayApp', []);
+var man = "NSS"
 
 var dataController = function mainController($scope, $http) {
   $scope.formData = {};
@@ -7,6 +8,8 @@ var dataController = function mainController($scope, $http) {
   $http({
     method: 'GET',
     url: '/api/parts',
+    headers: { 'Content-Type': 'application/json' },
+    params: { part_man: man }
   }).then(function (result) {
     var data = result.data;
     $scope.parts = data;
@@ -20,7 +23,6 @@ var dataController = function mainController($scope, $http) {
     url: '/api/manufacturers'
   }).then(function (result) {
     var data = result.data;
-    console.log(data);
     $scope.types = data;
   }, function (error) {
     console.log("Error: " + error);
