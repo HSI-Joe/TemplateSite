@@ -81,11 +81,3 @@ table td {
   color: #BDC3C7;
 }
 /* Gallary ===================================================================*/
-.gallary-big {
-  margin-left: 45px;
-  margin-right: 45px;
-  border-radius: 50%;
-}
-.gallary-small {
-  margin: 25px 25px 25px 25px;
-}
