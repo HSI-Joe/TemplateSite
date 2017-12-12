@@ -6,26 +6,20 @@ p.error {
 .navbar-inverse .navbar-nav > li > a {
    color: black; /*Change active text color here*/
 }
+/* Header Properties =========================================================*/
+.header {
+  background-color: #611515;
+  color: #ecf0f1;
+}
 /* Body ======================================================================*/
 body {
   font-family: 'Open Sans', serif;
+  background-color: #EEEEEE;
 }
 .subtitle {
-  color: #CFD8DC;
+  color: #D2D7D3;
   padding-top: 0px;
   margin-top: 0px;
-}
-.page-body {
-  background-color: #2c3e50;
-}
-.body-title {
-  background-color: #212F3C;
-}
-.part-header {
-  color: #ecf0f1;
-}
-.part-subheader {
-  color: #95a5a6;
 }
 .center-align {
   height: 90vh;
@@ -50,7 +44,7 @@ body {
 }
 .navigation-focus {
   color: white !important;
-  background: #212121;
+  background: #451313;
 }
 .navigation-focus:hover {
   color: white !important;
@@ -61,53 +55,30 @@ body {
   border-color: transparent;
   border-collapse: collapse;
 }
-table {
-    background: #17202A;
-    border: 1px solid #c3c3c3;
-    border-radius: 5px;
-    width: 50%;
-    border-spacing: 0px;
-    border-collapse: separate;
-}
 table th {
     font-weight: 600;
     font-size: 1.1em;
     text-align: left;
-    background: #212121;
+    background: #96281B;
     color: #ecf0f1;
 }
 table td {
     background: transparent;
 }
-tr:nth-child(even) {
-  background: #EBEDEF;
-  color: white;
-  border-bottom: 0px;
-}
-/*td:nth-child(odd) {
-  background: #566573;
-  color: white;
-  border-bottom: 0px;
-}*/
-/* Heaeder ===================================================================*/
-.header {
-  background-color: #212F3C;
-  color: white;
-}
 /* Footer ====================================================================*/
 .footer {
   text-align: center;
-  background-color: #ECEAEA;
+  background-color: #611515;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 .footer-header {
   text-align: center;
-  color: black;
+  color: #ECF0F1;
   padding-top: 15px;
 }
 .footer-subtext {
-  color: gray;
+  color: #BDC3C7;
 }
 /* Gallary ===================================================================*/
 .gallary-big {

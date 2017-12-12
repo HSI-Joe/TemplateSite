@@ -3,28 +3,36 @@
   <head>
     <title>Dri-Eaz</title>
 
-    <!-- Required META tags -->
+    <!-- META tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Dri-Eaz Operation Manuals, free tech support and quick shipping!">
+    <meta name="keywords" content="Dri-Eaz,Parts,Operation Manual,Part Manual">
+    <meta name="author" content="Joseph Holt">
+
     <!-- CSS Files-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="/javascript/core.js"></script>
-    <!-- Set page part type -->
+
+    <!-- Set page part type for database -->
     <script type="text/javascript"> man = "Dri-Eaz"; </script>
+
   </head>
   <body ng-app="displayApp" ng-controller="dataController" class="page-body">
     <!-- Navigation -->
     <div ng-include="'/navigation.html'"></div>
     <!-- Display table -->
-    <div class="row body-title">
-      <div class="container body-title">
-        <h1 class="part-header">Operation and Parts Manuals</h1>
-        <p class="part-subheader">All Dri-Eaz Parts and Operation Manuals</p>
+    <div class="row header">
+      <div class="container">
+        <h1>Operation and Parts Manuals</h1>
+        <p class="subtitle">All Dri-Eaz Parts and Operation Manuals</p>
         <br>
       </div>
     </div>
@@ -35,8 +43,8 @@
           <thred>
             <tr>
               <th>Part Name</th>
-              <th>Operation Manuals</th>
-              <th>Part Manuals</th>
+              <th>Operation Manual</th>
+              <th>Part Manual</th>
             </tr>
           </thred>
           <tbody ng-repeat="part in parts">
@@ -50,7 +58,9 @@
           </tbody>
           <thred>
             <tr>
-              <th style="color:#212121;">Not Visible</th>
+              <th style="color:#212121;"> </th>
+              <th style="color:#212121;"> </th>
+              <th style="color:#212121;"> </th>
             </tr>
           </thred>
         </table>
