@@ -21,7 +21,6 @@ app.get('/api/parts', function(req, res) {
     if (err) {
       console.error("Error getting parts in api...");
     } else {
-      console.log("Loading parts from server...");
       res.send(JSON.stringify(result));
     }
   });
@@ -32,7 +31,6 @@ app.get('/api/manufacturers', function(req, res) {
     if (err) {
       console.error("Error finding mans");
     } else {
-      console.log("Found manufacuturers");
       res.send(result)
     }
   })

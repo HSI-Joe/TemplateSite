@@ -15,9 +15,7 @@ exports.getDatabaseParts = function (url, collection, callback) {
           callback(err);
           return;
       }
-      console.log(collection);
-      console.log("Loading parts from database...");
-      console.log(result.length);
+      console.log("Fetching " + result.length + " " + collection + " parts from database...");
       callback(0, result);
 
       db.close;
@@ -39,7 +37,6 @@ exports.getManufacturers = function (url, callback) {
         callback(err);
       }
 
-      console.log('Sending mans');
       callback(0, collInfos)
     });
 
