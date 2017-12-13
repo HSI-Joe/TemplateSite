@@ -15,6 +15,9 @@ p.error {
 body {
   font-family: 'Open Sans', serif;
   background-color: #EEEEEE;
+  width: 99%;
+  margin: 0px;
+
 }
 .subtitle {
   color: #D2D7D3;
@@ -71,6 +74,7 @@ table td {
   background-color: #611515;
   padding-top: 15px;
   padding-bottom: 15px;
+  
 }
 .footer-header {
   text-align: center;
