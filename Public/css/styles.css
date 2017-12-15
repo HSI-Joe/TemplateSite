@@ -15,9 +15,6 @@ p.error {
 body {
   font-family: 'Open Sans', serif;
   background-color: #EEEEEE;
-  width: 99%;
-  margin: 0px;
-
 }
 .subtitle {
   color: #D2D7D3;
@@ -74,7 +71,6 @@ table td {
   background-color: #611515;
   padding-top: 15px;
   padding-bottom: 15px;
-  
 }
 .footer-header {
   text-align: center;
@@ -85,3 +81,11 @@ table td {
   color: #BDC3C7;
 }
 /* Gallary ===================================================================*/
+.gallary-big {
+  margin-left: 45px;
+  margin-right: 45px;
+  border-radius: 50%;
+}
+.gallary-small {
+  margin: 25px 25px 25px 25px;
+}
