@@ -6,7 +6,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ubuntu',
-      host: 'ec2-54-174-219-4.compute-1.amazonaws.com',
+      host: '35.168.77.218',
       key: '~/.ssh/ServerKeyPair.pem',
       ref: 'origin/master',
       repo: 'git@github.com:HSI-Joe/TemplateSite.git',
