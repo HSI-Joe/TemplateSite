@@ -36,23 +36,30 @@ app.get('/api/manufacturers', function(req, res) {
   })
 });
 
-// app.post('/api/parts', function(req, res) {
-//   var fav = false
-//   if (req.body.favorite == "on") {
-//     fav = true
-//   }
-//   var newPart = {
-//     "name": req.body.name,
-//     "operationManual": req.body.opm,
-//     "partManual": req.body.pm,
-//     "favorite": fav
-//   }
-//   db.addPart(url, req.body.type, newPart, function(err, result) {
-//     if (err) {
-//       console.error("Error");
-//     }
-//   })
-// });
+app.post('/api/parts', function(req, res) {
+  var fav = false
+  if (req.body.favorite == "on") {
+    fav = true
+  }
+  var newPart = {
+    "name": req.body.name,
+    "operationManual": req.body.opm,
+    "partManual": req.body.pm,
+    "favorite": fav
+  }
+  console.log(req.body.passwd);
+  if (req.body.passwd == "nGpnzBFxjNWyADxcZZDs2yRss") {
+    db.addPart(url, req.body.type, newPart, function(err, result) {
+      if (err) {
+        res.send("Error adding part");
+      } else {
+        res.send("success");
+      }
+    })
+  } else {
+    res.send("Wrong password")
+  }
+});
 
 app.get('/api/strings', function(req, res) {
   var dict = {
