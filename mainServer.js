@@ -31,12 +31,13 @@ app.get('/api/manufacturers', function(req, res) {
     if (err) {
       console.error("Error finding mans");
     } else {
+      console.log(result);
       res.send(result)
     }
   })
 });
 
-app.post('/api/parts', function(req, res) {
+app.post('/api/addpart', function(req, res) {
   var fav = false
   if (req.body.favorite == "on") {
     fav = true
@@ -59,6 +60,11 @@ app.post('/api/parts', function(req, res) {
   } else {
     res.send("Wrong password")
   }
+});
+
+app.post('/api/removepart/', function(req, res) {
+  console.log("Removing part");
+  console.log(res.body);
 });
 
 app.get('/api/strings', function(req, res) {

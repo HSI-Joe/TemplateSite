@@ -36,8 +36,12 @@ exports.getManufacturers = function (url, callback) {
         console.error('Error gettings mans');
         callback(err);
       }
-
-      callback(0, collInfos)
+      var names = [];
+      for (i=0; i < collInfos.length; i++) {
+        names.push(collInfos[i].name)
+      }
+      names.sort();
+      callback(0, names)
     });
 
     db.close()
