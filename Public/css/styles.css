@@ -89,3 +89,8 @@ table td {
 .gallary-small {
   margin: 25px 25px 25px 25px;
 }
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }

@@ -4,7 +4,7 @@ var client = mongo.MongoClient;
 exports.getDatabaseParts = function (url, collection, callback) {
   client.connect(url + "HarrisSupply", function(err, db) {
     if (err) {
-      console.error('Error connecting to database: ' + error.stack);
+      console.error('Error connecting to database: ' + err.stack);
       callback(error);
       return;
     }
@@ -52,7 +52,7 @@ exports.addPart = function (url, collection, part, callback) {
   client.connect(url + "HarrisSupply", function(err, db) {
     if (err) {
       console.error('Error connecting to database: ' + error.stack);
-      callback(error);
+      callback(err);
       return;
     }
     db.collection(collection).insertOne(part);
