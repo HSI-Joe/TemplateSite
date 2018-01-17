@@ -7,17 +7,30 @@ p.error {
    color: black; /*Change active text color here*/
 }
 /* Header Properties =========================================================*/
+.mainheader {
+  background-color: #611515;
+  color: #ecf0f1;
+  font-size: 300%;
+  /* padding-top: 30px; */
+}
 .header {
   background-color: #611515;
   color: #ecf0f1;
+  height: 150px;
 }
 /* Body ======================================================================*/
 body {
   font-family: 'Open Sans', serif;
   background-color: #EEEEEE;
 }
+.mainsubtitle {
+  color: #D2D7D3;
+  padding-top: 0px;
+  margin-top: 0px;
+}
 .subtitle {
   color: #D2D7D3;
+  font-size: 150%;
   padding-top: 0px;
   margin-top: 0px;
 }

@@ -27,14 +27,18 @@
   </head>
   <body ng-controller="dataController" class="page-body">
     <!-- Navigation -->
-    <div ng-include="'/navigation.html'"></div>
+    <div ng-include="'/navigation.html'" style="padding-bottom:0px;"></div>
     <!-- <div id="navBar"></div> -->
     <!-- Title -->
-    <div class="row header">
-      <div class="jumbotron col-md-8 header" style="margin-left: 20px;">
+    <div class="row mainheader" style="max-height:150px; height: 150px">
+      <div class="col-md-8" style="margin-left: 20px; float: left; padding-top: 30px;">
         <h1 style="margin-top: 0px; text-align: left;">Floor Equipment Parts</h1>
-        <h3 class="subtitle" style="text-align: left;">Harris Supply Industries</h3>
+        <h3 class="mainsubtitle" style="text-align: left;">Harris Supply Industries</h3>
       </div>
+      <a href="http://www.harrissupplyind.com">
+        <img class="col-md-2 pull-right" style="max-height:150px; padding-top:0px;" src="/images/floorequipmentpartsonline.jpg"</img>
+      </a>
+    </div>
     </div>
     <div class="row" style="padding-top: 50px; padding-bottom:50px;">
       <div id="partCarousel" class="carousel slide col-md-12" data-ride="carousel" style="margin: 0px auto;">
