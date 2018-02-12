@@ -1,4 +1,4 @@
-// set up =================================================
+// Set up =================================================
 var express = require('express');               // create web app
 var app = express();                            // creat web app
 var fs = require('fs');                         // access files
@@ -7,14 +7,14 @@ var path = __dirname + "/Public/";
 var bodyParser = require('body-parser');        // for html forms
 
 
-//Config ==================================================
-
+//Config =======================================================================
 app.use(express.static(__dirname + '/Public/'));
 app.use(bodyParser.json({ type: '*' }));
 app.use(bodyParser.urlencoded({extended: false}));
 
-// Server api =============================================
-
+// Server api ==================================================================
+/*  api/parts:  Returns a JSON array of the parts for the given manufacturer
+                Requres a part_man variable in the query */
 app.get('/api/parts', function(req, res) {
   var manufacturer = req.query.part_man
   db.getDatabaseParts(manufacturer, function(err, result) {
@@ -26,6 +26,7 @@ app.get('/api/parts', function(req, res) {
   });
 });
 
+// api/manufacturers: returns a JSON array of the manufacturers
 app.get('/api/manufacturers', function(req, res) {
   db.getManufacturers(function(err, result) {
     if (err) {
@@ -36,44 +37,7 @@ app.get('/api/manufacturers', function(req, res) {
   })
 });
 
-// app.post('/api/addpart', function(req, res) {
-//   var fav = false
-//   if (req.body.favorite == "on") {
-//     fav = true
-//   }
-//   var newPart = {
-//     "name": req.body.name,
-//     "operationManual": req.body.opm,
-//     "partManual": req.body.pm,
-//     "favorite": fav
-//   }
-//   if (req.body.passwd == "nGpnzBFxjNWyADxcZZDs2yRss") {
-//     db.addPart(url, req.body.type, newPart, function(err, result) {
-//       if (err) {
-//         res.send("Error adding part");
-//       } else {
-//         res.send("success");
-//       }
-//     })
-//   } else {
-//     res.send("Wrong password")
-//   }
-// });
-
-// app.post('/api/removepart/', function(req, res) {
-//   console.log("Removing part");
-//   console.log(res.body);
-// });
-
-// app.get('/api/strings', function(req, res) {
-//   var dict = {
-//     name: "NSS"
-//   };
-//   res.send(JSON.stringify(dict));
-// });
-
-// Site ===================================================
-
+// General Site ================================================================
 app.get('/', function (req, res) {
   res.sendFile('Public/index.html', {root: __dirname })
 });
@@ -82,6 +46,7 @@ app.get('*', function (req, res) {
   res.sendFile('Public/404.html', {root: __dirname })
 });
 
+// Launch server
 var server = app.listen(3000, function () {
   var host = server.address().address
   var port = server.address().port
