@@ -5,7 +5,7 @@ var fs = require('fs');                         // access files
 var db = require('./DBLoader');                 // load database
 var path = __dirname + "/Public/";
 var bodyParser = require('body-parser');        // for html forms
-var url = "mongodb://localhost:27017/";         // Database url
+
 
 //Config ==================================================
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/api/parts', function(req, res) {
   var manufacturer = req.query.part_man
-  db.getDatabaseParts(url, manufacturer, function(err, result) {
+  db.getDatabaseParts(manufacturer, function(err, result) {
     if (err) {
       console.error("Error getting parts in api...");
     } else {
@@ -27,54 +27,50 @@ app.get('/api/parts', function(req, res) {
 });
 
 app.get('/api/manufacturers', function(req, res) {
-  db.getManufacturers(url, function(err, result) {
+  db.getManufacturers(function(err, result) {
     if (err) {
       console.error("Error finding mans");
     } else {
-      console.log(result);
       res.send(result)
     }
   })
 });
 
-app.post('/api/addpart', function(req, res) {
-  var fav = false
-  if (req.body.favorite == "on") {
-    fav = true
-  }
-  var newPart = {
-    "name": req.body.name,
-    "operationManual": req.body.opm,
-    "partManual": req.body.pm,
-    "favorite": fav
-  }
-  console.log(req.body.passwd);
-  if (req.body.passwd == "nGpnzBFxjNWyADxcZZDs2yRss") {
-    db.addPart(url, req.body.type, newPart, function(err, result) {
-      if (err) {
-        res.send("Error adding part");
-      } else {
-        res.send("success");
-      }
-    })
-  } else {
-    res.send("Wrong password")
-  }
-});
+// app.post('/api/addpart', function(req, res) {
+//   var fav = false
+//   if (req.body.favorite == "on") {
+//     fav = true
+//   }
+//   var newPart = {
+//     "name": req.body.name,
+//     "operationManual": req.body.opm,
+//     "partManual": req.body.pm,
+//     "favorite": fav
+//   }
+//   if (req.body.passwd == "nGpnzBFxjNWyADxcZZDs2yRss") {
+//     db.addPart(url, req.body.type, newPart, function(err, result) {
+//       if (err) {
+//         res.send("Error adding part");
+//       } else {
+//         res.send("success");
+//       }
+//     })
+//   } else {
+//     res.send("Wrong password")
+//   }
+// });
 
-app.post('/api/removepart/', function(req, res) {
-  console.log("Removing part");
-  console.log(res.body);
-});
+// app.post('/api/removepart/', function(req, res) {
+//   console.log("Removing part");
+//   console.log(res.body);
+// });
 
-app.get('/api/strings', function(req, res) {
-  var dict = {
-    name: "NSS"
-  };
-
-  res.send(JSON.stringify(dict));
-
-});
+// app.get('/api/strings', function(req, res) {
+//   var dict = {
+//     name: "NSS"
+//   };
+//   res.send(JSON.stringify(dict));
+// });
 
 // Site ===================================================
 
