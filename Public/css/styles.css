@@ -8,13 +8,13 @@ p.error {
 }
 /* Header Properties =========================================================*/
 .mainheader {
-  background-color: #611515;
+  background-color: #2980b9;
   color: #ecf0f1;
   font-size: 300%;
   /* padding-top: 30px; */
 }
 .header {
-  background-color: #611515;
+  background-color: #2980b9;
   color: #ecf0f1;
   height: 150px;
 }
@@ -57,7 +57,7 @@ body {
 }
 .navigation-focus {
   color: white !important;
-  background: #451313;
+  background: #2c3e50;
 }
 .navigation-focus:hover {
   color: white !important;
@@ -72,7 +72,7 @@ table th {
     font-weight: 600;
     font-size: 1.1em;
     text-align: left;
-    background: #96281B;
+    background: #2c3e50;
     color: #ecf0f1;
 }
 table td {
@@ -81,7 +81,7 @@ table td {
 /* Footer ====================================================================*/
 .footer {
   text-align: center;
-  background-color: #611515;
+  background-color: #2980b9;
   padding-top: 15px;
   padding-bottom: 15px;
 }
