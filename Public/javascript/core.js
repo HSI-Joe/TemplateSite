@@ -1,3 +1,4 @@
+// Angular =====================================================================
 var display = angular.module('displayApp', []);
 var man = "NSS"
 
@@ -35,3 +36,12 @@ var stringController = function mainController($scope, $http) {
 }
 
 display.controller('dataController', dataController)
+
+// jQuerey
+$(document).ready(function() {
+  var alertDB = localStorage.getItem('alertDB');
+  if (alertDB == null || alertDB == 0) {
+    localStorage.setItem('alertDB', 1);
+  alert("Attention users:\nWe are currently migrating databases for the operation/part manuals. Manuals may be offline until the migration is complete.")
+  }
+});

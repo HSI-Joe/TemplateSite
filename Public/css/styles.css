@@ -19,9 +19,13 @@ p.error {
   height: 150px;
 }
 /* Body ======================================================================*/
-body {
-  font-family: 'Open Sans', serif;
-  background-color: #EEEEEE;
+html, body {
+    margin: 0;
+    min-height: 100%;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-family: 'Open Sans', serif;
+    background-color: #EEEEEE;
 }
 .mainsubtitle {
   color: #D2D7D3;
@@ -62,6 +66,19 @@ body {
 .navigation-focus:hover {
   color: white !important;
   background: #212121 !important;
+}
+/* Warning ===================================================================*/
+.warningAlert {
+  background-color: #c0392b;
+  color: white;
+  height:5vh;
+}
+.warningAlertMessage {
+  margin-top: 0px;
+  font-size: 25px;
+  margin-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 5px;
 }
 /* Table =====================================================================*/
 .table-whole {
