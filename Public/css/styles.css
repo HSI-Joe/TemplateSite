@@ -72,6 +72,7 @@ html, body {
   background-color: #c0392b;
   color: white;
   height:5vh;
+  cursor: pointer;
 }
 .warningAlertMessage {
   margin-top: 0px;
@@ -79,6 +80,9 @@ html, body {
   margin-left: 10px;
   padding-top: 6px;
   padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* Table =====================================================================*/
 .table-whole {

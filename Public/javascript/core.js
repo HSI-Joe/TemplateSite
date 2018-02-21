@@ -38,24 +38,19 @@ var stringController = function mainController($scope, $http) {
 display.controller('dataController', dataController)
 
 // jQuerey =====================================================================
-// add navbar
+
+// Import external files
 $.get("/navigation.html", function(data) {
   $("#nav-placeholder").replaceWith(data);
 })
-//
-// add migration warning
 $.get("/warning.html", function(data) {
   $("#warning-placeholder").replaceWith(data);
 })
-// add footer
 $.get("/footer.html", function(data) {
   $("#footer-placeholder").replaceWith(data);
 })
-// alert migration popup
-$(document).ready(function() {
-  var alertDB = localStorage.getItem('alertDB');
-  if (alertDB == null || alertDB == 0) {
-    localStorage.setItem('alertDB', 1);
+
+// onClick functions ===========================================================
+function displayWarning() {
   alert("Attention users:\nWe are currently migrating databases for the operation/part manuals. Manuals may be offline until the migration is complete.")
-  }
-});
+}
