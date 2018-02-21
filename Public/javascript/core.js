@@ -37,7 +37,7 @@ var stringController = function mainController($scope, $http) {
 
 display.controller('dataController', dataController)
 
-// jQuerey
+// jQuerey =====================================================================
 // add navbar
 $.get("/navigation.html", function(data) {
   $("#nav-placeholder").replaceWith(data);
@@ -46,6 +46,10 @@ $.get("/navigation.html", function(data) {
 // add migration warning
 $.get("/warning.html", function(data) {
   $("#warning-placeholder").replaceWith(data);
+})
+// add footer
+$.get("/footer.html", function(data) {
+  $("#footer-placeholder").replaceWith(data);
 })
 // alert migration popup
 $(document).ready(function() {
